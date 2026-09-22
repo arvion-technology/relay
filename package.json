@@ -1,0 +1,19 @@
+{
+  "name": "relay",
+  "version": "1.0.0",
+  "description": "A support copilot that answers from your own help centre, cites the passage, calls tools (order lookup) and escalates to a human when confidence is low.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "author": "Arvion Technologies <hello@arviontech.net> (https://arviontech.net)",
+  "homepage": "https://arvion-technology.github.io/labs/demos/relay/",
+  "repository": { "type": "git", "url": "git+https://github.com/arvion-technology/relay.git" },
+  "scripts": {
+    "test": "node --test",
+    "demo": "node scripts/serve.mjs . 4173",
+    "shot": "node scripts/shot.mjs 1440 900 docs/screenshot.png",
+    "shot:2": "node scripts/shot.mjs 1440 900 docs/screenshot-2.png #evaluation",
+    "verify": "node --test test/ && node scripts/serve-check.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
