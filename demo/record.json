@@ -1,0 +1,13 @@
+[
+  { "wait": 900 },
+  { "click": "#suggest-order" },
+  { "wait": 1600 },
+  { "eval": "(() => { const chips = document.querySelectorAll('#transcript .citation-chip'); chips[chips.length - 1]?.click(); })()" },
+  { "wait": 800 },
+  { "click": "#suggest-gift" },
+  { "wait": 2000 },
+  { "click": "#nav-conversations" },
+  { "wait": 1200 },
+  { "click": "#nav-evaluation" },
+  { "wait": 1600 }
+]
