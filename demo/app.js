@@ -1,4 +1,4 @@
-// Relay demo — support console UI.
+// Relay demo, support console UI.
 //
 // All reasoning lives in ../src (retrieval, composer, tools, confidence,
 // escalation, evaluation). This file renders the transcript and the operator
@@ -466,12 +466,12 @@ function renderConversations() {
           <span class="avatar">${escapeHtml(conversation.customer.initials)}</span>
           <div><b>${escapeHtml(conversation.customer.name)}</b><span>${escapeHtml(conversation.channel)}</span></div>
         </div></td>
-        <td class="question-cell"><span title="${escapeHtml(first?.text || "")}">${escapeHtml(first?.text || "—")}</span></td>
+        <td class="question-cell"><span title="${escapeHtml(first?.text || "")}">${escapeHtml(first?.text || ", ")}</span></td>
         <td>${confidencePill(last?.confidence?.score)}</td>
         <td>${conversation.ticket
           ? '<span class="badge red">Handed off</span>'
           : '<span class="badge green">Resolved</span>'}</td>
-        <td class="num mono">${conversation.firstResponseMs ? `${(conversation.firstResponseMs / 1000).toFixed(2)}s` : "—"}</td>
+        <td class="num mono">${conversation.firstResponseMs ? `${(conversation.firstResponseMs / 1000).toFixed(2)}s` : ", "}</td>
       </tr>`;
   }).join("");
 
@@ -529,7 +529,7 @@ function renderEvaluation() {
       : '<span class="badge red" style="font-size:9px">hand off</span>';
     const top = row.topArticleId
       ? (ARTICLE_BY_ID.get(row.topArticleId)?.title || row.topArticleId)
-      : "—";
+      : ", ";
     return `
       <tr>
         <td class="question-cell"><span title="${escapeHtml(row.question)}">${escapeHtml(row.question)}</span></td>

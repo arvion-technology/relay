@@ -1,5 +1,5 @@
 // The demo help centre: twenty articles for a fictional outdoor-clothing store,
-// Lumen Outfitters. The content is written to be retrievable — each article has
+// Lumen Outfitters. The content is written to be retrievable, each article has
 // a narrow title, a handful of tags and sentences that answer one question.
 //
 // Nothing here is scraped or real. It is the corpus the BM25 index is built over,

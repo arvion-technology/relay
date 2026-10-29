@@ -2,7 +2,7 @@
 <img src="docs/demo.gif" alt="Relay demo: asking a support question, opening a citation, escalating to a human and viewing the evaluation tab" width="100%" />
 </div>
 
-<sub>Recorded from the live demo — <a href="docs/demo.mp4">MP4</a> · <a href="docs/screenshot.png">static frame</a></sub>
+<sub>Recorded from the live demo, <a href="docs/demo.mp4">MP4</a> · <a href="docs/screenshot.png">static frame</a></sub>
 
 # Relay
 
@@ -22,22 +22,22 @@ before the code does.
 
 ## What it does
 
-- **Chat with evidence** — every answer carries citation chips that expand the
+- **Chat with evidence**: every answer carries citation chips that expand the
   quoted article passage, a tool-call card with arguments and result, and a
   confidence meter.
-- **Twenty-article help centre** — orders, shipping, returns, payments, promotions,
+- **Twenty-article help centre**: orders, shipping, returns, payments, promotions,
   account and support. BM25 retrieval over titles, tags and body text.
-- **Tool calls against a mock order API** — `lookup_order` and
+- **Tool calls against a mock order API**: `lookup_order` and
   `refund_eligibility` read an eight-row in-memory table with a fixed clock.
-- **Confidence with a visible threshold** — retrieval score, query-term coverage,
+- **Confidence with a visible threshold**: retrieval score, query-term coverage,
   tool outcome and citations combine into a score; below 0.62 the agent escalates.
-- **Human hand-off that creates a ticket** — ticket id, queue, priority, SLA and the
+- **Human hand-off that creates a ticket**: ticket id, queue, priority, SLA and the
   full transcript, including the confidence score that triggered the hand-off.
-- **Admin: conversations** — the seeded conversation log with deflection rate,
+- **Admin: conversations**: the seeded conversation log with deflection rate,
   hand-off count, first-response percentiles, a ticket queue and a confidence mix.
-- **Admin: evaluation** — fifteen labelled questions with hit@1, hit@3, MRR, tool
+- **Admin: evaluation**: fifteen labelled questions with hit@1, hit@3, MRR, tool
   accuracy, grounding and escalation accuracy, computed on every render.
-- **Keyboard and routing** — all three views are deep-linkable (`#chat`,
+- **Keyboard and routing**: all three views are deep-linkable (`#chat`,
   `#conversations`, `#evaluation`); the conversation log exports as CSV.
 
 ## Screenshots
